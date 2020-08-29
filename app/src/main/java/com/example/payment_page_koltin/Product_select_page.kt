@@ -1,17 +1,15 @@
 package com.example.payment_page_koltin
 
-import Models.Produto
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import kotlinx.android.synthetic.main.activity_main.*
-import android.R.attr.button
+import kotlinx.android.synthetic.main.payment_page.*
+import kotlinx.android.synthetic.main.product_select_page.*
+import kotlinx.android.synthetic.main.row.*
 
-
-
-class MainActivity : AppCompatActivity(){
+abstract class Product_select_page : AppCompatActivity(){
 
 
     private fun hideSystemUI() {
@@ -31,35 +29,21 @@ class MainActivity : AppCompatActivity(){
     }
 
 
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        print("Login in system")
-        list.add(Produto("Tomate","6,99","Alimentos"))
-        list.add(Produto("Regrigerante","3,50","Bebidas"))
-        list.add(Produto("Alcool em gel","12,30","Higiena"))
-        list.add(Produto("Luvas","4,50","Limpeza"))
-        list.add(Produto("Frago","8,50","Frios"))
-
-
-
-            button_login.setOnClickListener{
-                    user_name = "admin"
-                    print(user_name)
-                    intent = Intent(applicationContext, Product_select_page::class.java)
-                    startActivity(intent)
-
-            }
-
-
-
+        setContentView(R.layout.payment_page)
+        nome_usuário.text = "admin"
+        var listview = list_itens
+        listview.adapter = MyAdapter(this,R.layout.row, list)
+        ComprarButton.setOnClickListener {
+            intent = Intent(this, Payment_Screen::class.java)
+            startActivity(intent)
+        }
 
 
     }
+
+
+
 
 }
