@@ -13,31 +13,37 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/text_nome_row"
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:layout_margin="5dp"
-                android:textColor="#ffffff"
-                android:text="Nome"
-                android:gravity="center"
+        <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_nome_row"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:layout_margin="5dp"
+                    android:textColor="#ffffff"
+                    android:text="Nome"
+                    android:gravity="center"
 
-                app:fontFamily="@font/ubuntu_light"/>
+                    app:fontFamily="@font/ubuntu_light"/>
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/text_valor_row"
-                android:textStyle="normal"
-                android:textSize="24sp"
-                android:layout_margin="5dp"
-                android:textColor="#ffffff"
-                android:text="00:00"
-                android:gravity="center"
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_valor_row"
+                    android:textStyle="normal"
+                    android:textSize="24sp"
+                    android:layout_margin="5dp"
+                    android:textColor="#ffffff"
+                    android:text="00:00"
+                    android:gravity="center"
 
-                app:fontFamily="@font/ubuntu_light"/>
+                    app:fontFamily="@font/ubuntu_light"/>
+        </LinearLayout>
 
         <TextView
                 android:layout_width="match_parent"
@@ -52,7 +58,6 @@
                 app:fontFamily="@font/ubuntu_light"/>
         <Button
                 android:id="@+id/ComprarButton"
-                android:layout_margin="10dp"
                 android:layout_gravity="center"
                 android:text="Comprar"
                 android:textColor="#ffffff"

@@ -40,18 +40,18 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
 
         print("Login in system")
-        list.add(Produto("Tomate","6,99","Alimentos"))
-        list.add(Produto("Regrigerante","3,50","Bebidas"))
-        list.add(Produto("Alcool em gel","12,30","Higiena"))
-        list.add(Produto("Luvas","4,50","Limpeza"))
-        list.add(Produto("Frago","8,50","Frios"))
+        list.add(Produto("Tomate","6.99","Alimentos"))
+        list.add(Produto("Regrigerante","3.50","Bebidas"))
+        list.add(Produto("Alcool em gel","12.30","Higiena"))
+        list.add(Produto("Luvas","4.50","Limpeza"))
+        list.add(Produto("Frago","8.50","Frios"))
 
 
 
             button_login.setOnClickListener{
                     user_name = "admin"
                     print(user_name)
-                    intent = Intent(applicationContext, Product_select_page::class.java)
+                    intent = Intent(this, Product_select_page::class.java)
                     startActivity(intent)
 
             }

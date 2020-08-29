@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.payment_page.*
 import kotlinx.android.synthetic.main.product_select_page.*
 import kotlinx.android.synthetic.main.row.*
 
-abstract class Product_select_page : AppCompatActivity(){
+ class Product_select_page : AppCompatActivity(){
 
 
     private fun hideSystemUI() {
@@ -31,14 +31,24 @@ abstract class Product_select_page : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.payment_page)
-        nome_usuário.text = "admin"
+        setContentView(R.layout.product_select_page)
+        hideSystemUI()
+        nome_usuario.text = user_name
         var listview = list_itens
-        listview.adapter = MyAdapter(this,R.layout.row, list)
-        ComprarButton.setOnClickListener {
-            intent = Intent(this, Payment_Screen::class.java)
-            startActivity(intent)
+        listview.adapter = MyAdapter(this,R.layout.row, list,R.layout.product_select_page)
+
+        val finalizar:Button = findViewById(R.id.finalizar_button)
+        finalizar.setOnClickListener(){
+            if(compras.isEmpty()){
+                Toast.makeText(applicationContext, "Nada selecionado", Toast.LENGTH_LONG).show()
+            }else{
+                intent = Intent(this,Payment_Screen_Full::class.java)
+                startActivity(intent)
+            }
+
+
         }
+
 
 
     }
