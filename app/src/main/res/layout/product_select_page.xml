@@ -16,10 +16,11 @@
             app:layout_constraintVertical_bias="1.0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.488">
+            app:layout_constraintHorizontal_bias="0.488" android:id="@+id/constraintLayout3">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+            android:paddingTop="40dp"
             android:background="@drawable/container_background"
             android:layout_width="350dp"
             android:layout_height="500dp"
@@ -32,60 +33,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.415"
             app:layout_constraintVertical_bias="1.0"
-            android:id="@+id/constraintLayout2">
+            android:id="@+id/constraintLayout2" android:orientation="vertical">
 
         <LinearLayout
-                android:gravity="center"
-                android:background="@drawable/screen_background"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_product_item"
                 android:orientation="horizontal"
                 android:layout_width="300dp"
-                android:layout_height="120dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="120dp" android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent">
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-                android:gravity="center"
-                android:background="@drawable/screen_background"
-                android:orientation="horizontal"
-                android:layout_width="300dp"
-                android:layout_height="120dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent">
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-                android:gravity="center"
-                android:background="@drawable/screen_background"
-                android:orientation="horizontal"
-                android:layout_width="300dp"
-                android:layout_height="120dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent">
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -98,6 +57,82 @@
             </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_product_item"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="120dp" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/linearLayout4">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </LinearLayout>
+        </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_product_item"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="120dp" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <TextView
+            android:text="Bem vindo"
+            android:textSize="50dp"
+            android:fontFamily="@font/ubuntu_light"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2" app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintVertical_bias="0.064"/>
+    <TextView
+            android:text="Nome usuário"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/ubuntu_light"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nome_usuário" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintVertical_bias="0.195"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="195dp"
+            tools:layout_editor_absoluteX="175dp" android:id="@+id/textView12"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
