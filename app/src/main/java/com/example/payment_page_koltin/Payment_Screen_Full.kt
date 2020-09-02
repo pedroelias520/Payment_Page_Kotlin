@@ -1,14 +1,12 @@
 package com.example.payment_page_koltin
 
 import Models.MaskEditUtil
-import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.payment_page.*
-import kotlinx.android.synthetic.main.product_select_page.*
+import java.util.*
 
 class Payment_Screen_Full : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
@@ -16,6 +14,14 @@ class Payment_Screen_Full : AppCompatActivity(), AdapterView.OnItemSelectedListe
     private var spinner: Spinner? = null
     private var text_view: TextView? = null
     private var arrayAdapter: ArrayAdapter<String>? = null
+
+    var nome_cartao:String = ""
+    var cartao_numero:String = ""
+    var validade_mes: Int = 0
+    var validade_ano: Int = 0
+    var codigo: Int = 0
+    var valor_total:Double = 0.00
+    var num_parcelas:Int = 0
 
     private var itemList = arrayOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12")
     private fun hideSystemUI() {
@@ -43,6 +49,10 @@ class Payment_Screen_Full : AppCompatActivity(), AdapterView.OnItemSelectedListe
         cpf_editext.addTextChangedListener(MaskEditUtil.mask(cpf_editext, "###.###.###-##"));
         cartao_editext.addTextChangedListener(MaskEditUtil.mask(cartao_editext, "####-####-####-####"))
         cvv_editext.addTextChangedListener(MaskEditUtil.mask(cvv_editext,"###"))
+        mes_validade.addTextChangedListener(MaskEditUtil.mask(mes_validade,"##"))
+        ano_validade.addTextChangedListener(MaskEditUtil.mask(ano_validade,"##"))
+
+
         nome_produto.text = nome_prod
         spinner = list_parcelas
         text_view = parcelas_text
@@ -56,6 +66,23 @@ class Payment_Screen_Full : AppCompatActivity(), AdapterView.OnItemSelectedListe
                 cpf_editext.setTextColor(resources.getColor(R.color.abc_search_url_text))
             }
         }
+
+        end_button.setOnClickListener{
+            nome_cartao = nome_cartao_editext.text.toString()
+            cartao_numero = cartao_editext.text.toString()
+            validade_mes= mes_validade.text.toString().toInt()
+            validade_ano= ano_validade.text.toString().toInt()
+            codigo = cvv_editext.text.toString().toInt()
+
+            print(nome_cartao)
+            print(cartao_numero)
+            print(validade_mes)
+            print(validade_ano)
+            print(codigo)
+            print(valor_total)
+            print(num_parcelas)
+        }
+
 
 
     }
@@ -71,6 +98,8 @@ class Payment_Screen_Full : AppCompatActivity(), AdapterView.OnItemSelectedListe
         if(items.equals(null)){
             text_view?.text = "Pagamento a vista"
         }else{
+            valor_total = compras_sum.toDouble()/items.toDouble()
+            num_parcelas = items.toInt()
             text_view?.text = "${items} x de ${compras_sum.toFloat()/items.toFloat()}"
         }
 

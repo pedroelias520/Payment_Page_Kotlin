@@ -14,7 +14,7 @@ object MaskEditUtil {
     val FORMAT_HOUR = "##:##"
     val CREDIT_CARD = "####-####-####-####"
     val CVV = "###"
-
+    val DATA = "##/##"
     /**
      * Método que deve ser chamado para realizar a formatação
      *

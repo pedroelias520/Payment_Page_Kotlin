@@ -75,7 +75,7 @@
     <ImageView
             android:tint="@android:color/white"
             android:layout_width="22dp"
-            android:layout_height="21dp" app:srcCompat="@android:drawable/ic_menu_my_calendar"
+            android:layout_height="21dp" app:srcCompat="@android:drawable/ic_menu_myplaces"
             android:id="@+id/imageView2" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
@@ -171,16 +171,16 @@
             app:layout_constraintTop_toBottomOf="@+id/parcelas_text"/>
     <TextView
             android:textColor="#ffffff"
-            android:textSize="25dp"
+            android:textSize="15dp"
             android:text="Comprador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cpf_comprador" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintHorizontal_bias="0.257"
             app:fontFamily="@font/ubuntu_light"
-            android:layout_marginBottom="132dp" app:layout_constraintBottom_toTopOf="@+id/cpf_editext"/>
+            android:layout_marginBottom="100dp" app:layout_constraintBottom_toTopOf="@+id/cpf_editext"/>
     <Button
             android:text="Finalizar Compra"
             android:textColor="#ffffff"
@@ -189,7 +189,7 @@
             android:background="@drawable/screen_background"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:id="@+id/end_button" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout2" android:layout_marginTop="8dp"
@@ -215,4 +215,72 @@
             android:layout_marginBottom="168dp" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"/>
+    <EditText
+            android:textColor="#ffffff"
+            android:background="@drawable/rounded_plain_text_outline"
+            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/mes_validade" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.664" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout2" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.592"/>
+    <EditText
+            android:textColor="#ffffff"
+            android:background="@drawable/rounded_plain_text_outline"
+            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/ano_validade" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.831" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout2" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.592"/>
+    <TextView
+            android:text="Data validade"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/ubuntu_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.792" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.523"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_my_calendar"
+            android:id="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintHorizontal_bias="0.581" app:layout_constraintVertical_bias="0.527"/>
+    <EditText
+            android:textColor="#ffffff"
+            android:inputType="textPersonName"
+            android:background="@drawable/rounded_plain_text_outline"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:id="@+id/nome_cartao_editext" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.505" app:layout_constraintVertical_bias="0.308"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_add"
+            android:id="@+id/imageView7" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintHorizontal_bias="0.118" app:layout_constraintVertical_bias="0.257"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

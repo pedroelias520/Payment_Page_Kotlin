@@ -29,7 +29,7 @@ class MyAdapter(var mCtx:Context,var resources:Int,var items:List<Produto>,var s
         DescricaoView.text = mItem.tipo
 
         ComprarButton.setOnClickListener {
-            nome_prod = mItem.nome
+            produtos_comprados.add(mItem.nome)
             valor_prod = mItem.valor
             tipo_prod = mItem.tipo
             compras.add(Produto(nome_prod, valor_prod, tipo_prod))
@@ -53,3 +53,4 @@ var nome_prod:String = ""
 var valor_prod:String = ""
 var tipo_prod:String = ""
 var user_name:String = ""
+var produtos_comprados = mutableListOf<String>()

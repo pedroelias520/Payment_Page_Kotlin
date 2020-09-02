@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import kotlinx.android.synthetic.main.payment_page.*
 import kotlinx.android.synthetic.main.product_select_page.*
-import kotlinx.android.synthetic.main.row.*
 
- class Product_select_page : AppCompatActivity(){
+class Product_select_page : AppCompatActivity(){
 
 
     private fun hideSystemUI() {
@@ -37,7 +35,7 @@ import kotlinx.android.synthetic.main.row.*
         var listview = list_itens
         listview.adapter = MyAdapter(this,R.layout.row, list,R.layout.product_select_page)
 
-        val finalizar:Button = findViewById(R.id.finalizar_button)
+        val finalizar:Button = findViewById(R.id.finalizar_button_blue)
         finalizar.setOnClickListener(){
             if(compras.isEmpty()){
                 Toast.makeText(applicationContext, "Nada selecionado", Toast.LENGTH_LONG).show()
