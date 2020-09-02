@@ -284,5 +284,6 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/nome_cartao_editext"
             app:layout_constraintHorizontal_bias="0.484"
-            app:layout_constraintVertical_bias="0.708" android:id="@+id/lista_produtos_comprados"/>
+            app:layout_constraintVertical_bias="0.708"
+            android:id="@+id/lista_produtos_comprados"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

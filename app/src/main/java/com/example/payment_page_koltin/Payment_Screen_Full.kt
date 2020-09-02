@@ -63,9 +63,8 @@ class Payment_Screen_Full : AppCompatActivity(), AdapterView.OnItemSelectedListe
         spinner?.onItemSelectedListener = this
 
         cpf_editext.setOnClickListener {
-            nome_produto.text = cpf_editext.text
-            if (nome_produto.text != null) {
-                cpf_editext.setTextColor(resources.getColor(R.color.abc_search_url_text))
+            if (cpf_editext.text != null) {
+                cpf_editext.setTextColor(resources.getColor(R.color.abc_tint_spinner))
             }
         }
 
