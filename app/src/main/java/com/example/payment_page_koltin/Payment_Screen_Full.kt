@@ -1,6 +1,7 @@
 package com.example.payment_page_koltin
 
 import Models.MaskEditUtil
+import Models.Produto
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -51,9 +52,10 @@ class Payment_Screen_Full : AppCompatActivity(), AdapterView.OnItemSelectedListe
         cvv_editext.addTextChangedListener(MaskEditUtil.mask(cvv_editext,"###"))
         mes_validade.addTextChangedListener(MaskEditUtil.mask(mes_validade,"##"))
         ano_validade.addTextChangedListener(MaskEditUtil.mask(ano_validade,"##"))
+        var lista_comprados = findViewById<ListView>(R.id.lista_produtos_comprados)
+        var adapter = ArrayAdapter <Produto>(this,android.R.layout.simple_list_item_1, compras)
+        lista_comprados.adapter = adapter
 
-
-        nome_produto.text = nome_prod
         spinner = list_parcelas
         text_view = parcelas_text
         arrayAdapter = ArrayAdapter(applicationContext, android.R.layout.simple_spinner_item, itemList)

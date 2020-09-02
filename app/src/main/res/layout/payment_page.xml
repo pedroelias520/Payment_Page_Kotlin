@@ -149,26 +149,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/parcelas_text"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="44dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintHorizontal_bias="0.142"
             app:fontFamily="@font/ubuntu_light"/>
-    <TextView
-            android:textColor="#ffffff"
-            android:textSize="25dp"
-            android:text="Nome do produto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/nome_produto" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.179"
-            app:fontFamily="@font/ubuntu_light" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/cpf_comprador" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/parcelas_text"/>
     <TextView
             android:textColor="#ffffff"
             android:textSize="15dp"
@@ -283,4 +270,19 @@
             android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
             app:layout_constraintHorizontal_bias="0.118" app:layout_constraintVertical_bias="0.257"/>
+    <ListView
+            android:layout_width="300dp"
+            android:layout_height="78dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/nome_cartao_editext"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintVertical_bias="0.708" android:id="@+id/lista_produtos_comprados"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
